@@ -53,6 +53,8 @@ master.menu.administrator.configuration = Customization parameters
 
 master.menu.provider = Provider
 master.menu.provider.favourite-link = Favourite link
+master.menu.provider.requests.list = List Requests
+master.menu.provider.requests.create = Create Request
 
 # master.menu.consumer ##########################################################
 

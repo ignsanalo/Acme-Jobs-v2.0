@@ -16,7 +16,7 @@ public interface AnonymousAnnouncementRepository extends AbstractRepository {
 	@Query("select a from Announcement a where a.id = ?1")
 	Announcement findOneById(int id);
 
-	@Query("select a from Announcement a where a.moment > ?1")
+	@Query("select a from Announcement a where a.moment >= ?1")
 	Collection<Announcement> findManyByDateGreater(Date moment);
 
 }

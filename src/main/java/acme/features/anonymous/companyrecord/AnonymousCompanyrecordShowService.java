@@ -46,7 +46,6 @@ public class AnonymousCompanyrecordShowService implements AbstractShowService<An
 
 		id = request.getModel().getInteger("id");
 		result = this.repository.findOneById(id);
-		result.setName(result.getIncorporatedName());
 
 		return result;
 	}
