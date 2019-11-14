@@ -324,8 +324,8 @@ has v</panel_attributes>
     <panel_attributes>Requests
 --
 + title: String {NotBlank}
-+ moment: Date {Temporal{TIMESTAMP}, PAST}
-+ deadline: Date {Date}
++ moment: Date { Temporal{TIMESTAMP}, PAST}
++ deadline: Date {Temporal{TIMESTAMP}, NotNull}
 + text: String {NotBlank}
 + reward: Money {NotNull, Valid}
 + ticker: String {NotBlank, Unique, Pattern{^[R]{1}[A-Z]{4}\\-[0-9]{5}$}
@@ -345,7 +345,7 @@ has v</panel_attributes>
 --
 + title: String {NotBlank}
 + moment: Date {Temporal{TIMESTAMP}, PAST}
-+ deadline: Date {Date}
++ deadline: Date {Temporal{TIMESTAMP},NotNull}
 + text: String {NotBlank}
 + range : Money {NotNull, Valid}
 + ticker: String {NotBlank, Pattern{^[O]{1}[A-Z]{4}\\-[0-9]{5}$}
@@ -367,11 +367,11 @@ has v</panel_attributes>
 + sector: String {NotBlank}
 + ceo: String {NotBlank}
 + description: String {NotBlank}
-+ web : String {NotBlank, URL}
++ web : String {URL,NotBlank}
 + phone: String {NotBlank, Pattern(regexp = "^([+][1-9]{0,3}[\\s]{0,1})?([(][1-9]{0,4}[)][\\s]{0,1})?[0-9]{6,10}$")}
 + email: String {Email, NotNull}
 + starts: Integer {Min(0), Max(5)}
-+ incorporated: Boolean {NotNull}
++ incorporated: boolean 
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -388,7 +388,7 @@ has v</panel_attributes>
 + name: String {NotBlank}
 + sector:String {NotBlank}
 + statement: String {NotBlank}
-+ stars: Integer {Min{0}, Max{5}}
++ stars: Integer {Integer, Min{0}, Max{5}}
 
 </panel_attributes>
     <additional_attributes/>
@@ -404,7 +404,7 @@ has v</panel_attributes>
     <panel_attributes>Challenge
 --
 + title: String {NotBlank}
-+ deadline: Date {Temporal{TIMESTAMP}}
++ deadline: Date {Temporal{TIMESTAMP},NotNull}
 + description: String {NotBlank}
 + goalgold : String {NotBlank}
 + rewardgold : Money {NotNull, Valid}
@@ -413,26 +413,6 @@ has v</panel_attributes>
 + goalbronze : String {NotBlank}
 + rewardbronze : Money {NotNull, Valid}
 
-
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>14</x>
-      <y>84</y>
-      <w>308</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>Requests
---
-+ title: String {NotBlank}
-+ moment: Date {Temporal{TIMESTAMP}, PAST}
-+ deadline: Date {Date}
-+ text: String {NotBlank}
-+ reward: Money {NotNull, Valid}
-+ ticker: String {NotBlank, Unique, Pattern{^[R]{1}[A-Z]{4}\\-[0-9]{5}$}
 
 </panel_attributes>
     <additional_attributes/>
