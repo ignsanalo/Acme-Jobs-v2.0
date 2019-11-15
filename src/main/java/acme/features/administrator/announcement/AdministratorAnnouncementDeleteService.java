@@ -44,7 +44,7 @@ public class AdministratorAnnouncementDeleteService implements AbstractDeleteSer
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "titte", "text", "moreInfo");
+		request.unbind(entity, model, "title", "moment", "moreInfo", "text");
 	}
 
 	@Override
