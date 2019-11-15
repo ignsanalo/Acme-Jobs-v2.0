@@ -12,14 +12,14 @@
 	<acme:form-textarea code="administrator.announcement.form.label.text" path="text" />
 
 	<acme:form-submit test="${command != 'show'}" code="administrator.announcement.form.button.update"
-		action="administrator/announcement/update" />
+		action="/administrator/announcement/update" />
 	<acme:form-submit test="${command != 'show'}" code="administrator.announcement.form.button.delete"
-		action="administrator/announcement/delete" />
+		action="/administrator/announcement/delete" />
 	<acme:form-submit test="${command != 'create'}" code="administrator.announcement.form.button.create"
-		action="administrator/announcement/create" />
+		action="/administrator/announcement/create" />
 	<acme:form-submit test="${command != 'update'}" code="administrator.announcement.form.button.update"
-		action="administrator/announcement/update" />
+		action="/administrator/announcement/update" />
 	<acme:form-submit test="${command != 'delete'}" code="administrator.announcement.form.button.delete"
-		action="administrator/announcement/delete" />
+		action="/administrator/announcement/delete" />
 	<acme:form-return code="administrator.announcement.form.button.return" />
 </acme:form>

@@ -23,9 +23,6 @@
 			<acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list" />
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.list" action="/anonymous/investorrecords/list" />
       <acme:menu-suboption code="master.menu.anonymous.companyrecord.list" action="/anonymous/companyrecord/list" />
-			
-			
-
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
