@@ -71,7 +71,7 @@ public class AdministratorInvestorrecordsDeleteService implements AbstractDelete
 		assert request != null;
 		assert entity != null;
 
-		this.repository.save(entity);
+		this.repository.delete(entity);
 
 	}
 
