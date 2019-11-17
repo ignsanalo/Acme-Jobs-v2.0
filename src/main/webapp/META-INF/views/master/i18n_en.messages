@@ -48,6 +48,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement.list = List announcement
 master.menu.administrator.configuration = Customization parameters
+master.menu.administrator.challenge.list = List challenges
+master.menu.administrator.challenge.create = Create challenge
 
 # master.menu.provider ########################################################
 
