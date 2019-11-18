@@ -36,7 +36,6 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
       <acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/list" />
-		<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list" />
 			<acme:menu-suboption code="master.menu.administrator.challenge.create" action="/administrator/challenge/create" />
 		</acme:menu-option>
@@ -49,6 +48,8 @@
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/" />
+			<acme:menu-suboption code="master.menu.consumer.offers.list" action="/consumer/offer/list" />
+			<acme:menu-suboption code="master.menu.consumer.offers.create" action="/consumer/offer/create/" />
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">

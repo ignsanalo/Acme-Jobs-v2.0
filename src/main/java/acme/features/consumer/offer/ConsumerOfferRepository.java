@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.offer;
+package acme.features.consumer.offer;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import acme.entities.offers.Offer;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedOfferRepository extends AbstractRepository {
+public interface ConsumerOfferRepository extends AbstractRepository {
 
 	@Query("select a from Offer a where a.id = ?1")
 	Offer findOneById(int id);
