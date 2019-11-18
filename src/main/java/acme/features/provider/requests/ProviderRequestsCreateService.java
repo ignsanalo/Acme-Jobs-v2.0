@@ -59,6 +59,11 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert errors != null;
 
+		boolean isAccepted;
+
+		isAccepted = request.getModel().getBoolean("accept");
+		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
+
 	}
 
 	@Override
