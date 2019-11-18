@@ -61,6 +61,8 @@ master.menu.provider.requests.create = Crear Solicitud
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+master.menu.consumer.offers.list = Listar Ofertas
+master.menu.consumer.offers.create = Crear Ofertas
 
 # master.menu.user-account ####################################################
 
