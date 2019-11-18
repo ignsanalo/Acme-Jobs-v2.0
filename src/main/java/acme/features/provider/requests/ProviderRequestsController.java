@@ -27,24 +27,14 @@ import acme.framework.controllers.AbstractController;
 @RequestMapping("/provider/requests/")
 public class ProviderRequestsController extends AbstractController<Provider, Requests> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
-	private ProviderRequestsListService		listService;
-
-	@Autowired
-	private ProviderRequestsShowService		showService;
-
-	@Autowired
-	private ProviderRequestsCreateService	createService;
+	private ProviderRequestsCreateService createService;
 
 
 	// Constructors -----------------------------------------------------------
 
 	@PostConstruct
 	private void initialise() {
-		super.addBasicCommand(BasicCommand.LIST, this.listService);
-		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}
 
