@@ -1,5 +1,5 @@
 
-package acme.features.administrator.announcement;
+package acme.features.administrator.companyrecord;
 
 import javax.annotation.PostConstruct;
 
@@ -7,32 +7,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.announcements.Announcement;
+import acme.entities.companyrecords.Companyrecord;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/administrator/announcement/")
-
-public class AdministratorAnnouncementController extends AbstractController<Administrator, Announcement> {
+@RequestMapping("/administrator/companyrecord/")
+public class AdministratorCompanyRecordController extends AbstractController<Administrator, Companyrecord> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorAnnouncementListService	listService;
+	private AdministratorCompanyRecordListService	listService;
 
 	@Autowired
-	private AdministratorAnnouncementShowService	showService;
+	private AdministratorCompanyRecordShowService	showService;
 
 	@Autowired
-	private AdministratorAnnouncementCreateService	createService;
+	private AdministratorCompanyRecordCreateService	createService;
 
 	@Autowired
-	private AdministratorAnnouncementUpdateService	updateService;
+	private AdministratorCompanyRecordUpdateService	updateService;
 
 	@Autowired
-	private AdministratorAnnouncementDeleteService	deleteService;
+	private AdministratorCompanyRecordDeleteService	deleteService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -45,5 +44,4 @@ public class AdministratorAnnouncementController extends AbstractController<Admi
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 	}
-
 }
