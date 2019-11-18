@@ -18,12 +18,12 @@
 
 <tiles-definitions>
 	
-	<definition name="administrator/announcement/list" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/announcement/list.jsp" />
+	<definition name="administrator/investorrecords/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/investorrecords/list.jsp" />
 	</definition>
 	
-	<definition name="administrator/announcement/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/announcement/form.jsp" />
+	<definition name="administrator/investorrecords/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/investorrecords/form.jsp" />
 	</definition>
 	
 </tiles-definitions>

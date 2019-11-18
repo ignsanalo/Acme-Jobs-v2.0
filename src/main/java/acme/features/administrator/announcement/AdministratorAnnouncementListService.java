@@ -46,7 +46,7 @@ public class AdministratorAnnouncementListService implements AbstractListService
 
 		Collection<Announcement> result;
 
-		result = this.repository.findManyAll();
+		result = this.repository.findManyAnnouncements();
 
 		return result;
 

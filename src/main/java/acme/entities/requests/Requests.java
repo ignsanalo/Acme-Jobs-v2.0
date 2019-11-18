@@ -1,5 +1,4 @@
 
-
 package acme.entities.requests;
 
 import java.util.Date;
@@ -36,6 +35,7 @@ public class Requests extends DomainEntity {
 	private Date				moment;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
 	private Date				deadline;
 
 	@NotBlank
@@ -55,4 +55,3 @@ public class Requests extends DomainEntity {
 	// Relationships ----------------------------------------------------------------------
 
 }
-

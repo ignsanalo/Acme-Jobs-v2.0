@@ -45,6 +45,7 @@ public class Offer extends DomainEntity {
 	private Money				range;
 
 	@Pattern(regexp = "^[O]{1}[A-Z]{4}\\-[0-9]{5}$")
+	@NotBlank
 	private String				ticker;
 
 	// Derived attributes -----------------------------------------------------------------
