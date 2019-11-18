@@ -51,6 +51,8 @@ master.menu.administrator.announcement.create = Create announcements
 master.menu.administrator.investorrecords.list = List investor records
 master.menu.administrator.investorrecords.create = Create investor records
 master.menu.administrator.configuration = Customization parameters
+master.menu.administrator.challenge.list = List challenges
+master.menu.administrator.challenge.create = Create challenge
 
 # master.menu.provider ########################################################
 
