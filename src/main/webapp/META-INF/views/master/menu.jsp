@@ -39,7 +39,6 @@
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/" />
-			<acme:menu-suboption code="master.menu.provider.requests.list" action="/provider/requests/list/" />
 			<acme:menu-suboption code="master.menu.provider.requests.create" action="/provider/requests/create/" />
 		</acme:menu-option>
 
