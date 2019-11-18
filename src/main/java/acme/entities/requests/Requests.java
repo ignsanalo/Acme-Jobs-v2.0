@@ -32,6 +32,7 @@ public class Requests extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
+	@Column(unique = true)
 	private Date				moment;
 
 	@Temporal(TemporalType.TIMESTAMP)

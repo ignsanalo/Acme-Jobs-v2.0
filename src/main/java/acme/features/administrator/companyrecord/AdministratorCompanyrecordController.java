@@ -14,24 +14,24 @@ import acme.framework.entities.Administrator;
 
 @Controller
 @RequestMapping("/administrator/companyrecord/")
-public class AdministratorCompanyRecordController extends AbstractController<Administrator, Companyrecord> {
+public class AdministratorCompanyrecordController extends AbstractController<Administrator, Companyrecord> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorCompanyRecordListService	listService;
+	private AdministratorCompanyrecordListService	listService;
 
 	@Autowired
-	private AdministratorCompanyRecordShowService	showService;
+	private AdministratorCompanyrecordShowService	showService;
 
 	@Autowired
-	private AdministratorCompanyRecordCreateService	createService;
+	private AdministratorCompanyrecordCreateService	createService;
 
 	@Autowired
-	private AdministratorCompanyRecordUpdateService	updateService;
+	private AdministratorCompanyrecordUpdateService	updateService;
 
 	@Autowired
-	private AdministratorCompanyRecordDeleteService	deleteService;
+	private AdministratorCompanyrecordDeleteService	deleteService;
 
 
 	// Constructors -----------------------------------------------------------
