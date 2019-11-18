@@ -12,10 +12,10 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AdministratorCompanyRecordCreateService implements AbstractCreateService<Administrator, Companyrecord> {
+public class AdministratorCompanyrecordCreateService implements AbstractCreateService<Administrator, Companyrecord> {
 
 	@Autowired
-	AdministratorCompanyRecordRepository repository;
+	AdministratorCompanyrecordRepository repository;
 
 
 	@Override

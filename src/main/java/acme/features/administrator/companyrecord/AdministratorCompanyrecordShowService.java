@@ -11,12 +11,12 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AdministratorCompanyRecordShowService implements AbstractShowService<Administrator, Companyrecord> {
+public class AdministratorCompanyrecordShowService implements AbstractShowService<Administrator, Companyrecord> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AdministratorCompanyRecordRepository repository;
+	private AdministratorCompanyrecordRepository repository;
 
 
 	@Override

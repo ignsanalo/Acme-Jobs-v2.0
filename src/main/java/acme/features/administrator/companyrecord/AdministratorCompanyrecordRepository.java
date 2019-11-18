@@ -10,9 +10,9 @@ import acme.entities.companyrecords.Companyrecord;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AdministratorCompanyRecordRepository extends AbstractRepository {
+public interface AdministratorCompanyrecordRepository extends AbstractRepository {
 
-	@Query("select a from Companyrecord a where a.id = ?1)")
+	@Query("select a from Companyrecord a where a.id = ?1")
 	Companyrecord findOneById(int id);
 
 	@Query("select a from Companyrecord a")

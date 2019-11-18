@@ -12,10 +12,10 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorCompanyRecordDeleteService implements AbstractDeleteService<Administrator, Companyrecord> {
+public class AdministratorCompanyrecordDeleteService implements AbstractDeleteService<Administrator, Companyrecord> {
 
 	@Autowired
-	AdministratorCompanyRecordRepository repository;
+	AdministratorCompanyrecordRepository repository;
 
 
 	@Override

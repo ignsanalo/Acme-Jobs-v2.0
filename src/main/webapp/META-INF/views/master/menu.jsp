@@ -31,6 +31,8 @@
       <acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create" />
       <acme:menu-suboption code="master.menu.administrator.investorrecords.list" action="/administrator/investorrecords/list" />
 			<acme:menu-suboption code="master.menu.administrator.investorrecords.create" action="/administrator/investorrecords/create" />
+	  <acme:menu-suboption code="master.menu.administrator.companyrecord.list" action="/administrator/companyrecord/list" />
+	  <acme:menu-suboption code="master.menu.administrator.companyrecord.create" action="/administrator/companyrecord/create" />
 	<acme:menu-separator />
 
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
