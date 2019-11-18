@@ -23,17 +23,16 @@
 			<acme:menu-suboption code="master.menu.anonymous.announcement.list" action="/anonymous/announcement/list" />
 			<acme:menu-suboption code="master.menu.anonymous.investorrecords.list" action="/anonymous/investorrecords/list" />
       <acme:menu-suboption code="master.menu.anonymous.companyrecord.list" action="/anonymous/companyrecord/list" />
-			
-			
-
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list" />
-      		<acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list" />
-      		<acme:menu-suboption code="master.menu.administrator.investorrecords.list" action="/administrator/investorrecords/list" />
+      <acme:menu-suboption code="master.menu.administrator.announcement.list" action="/administrator/announcement/list" />
+      <acme:menu-suboption code="master.menu.administrator.announcement.create" action="/administrator/announcement/create" />
+      <acme:menu-suboption code="master.menu.administrator.investorrecords.list" action="/administrator/investorrecords/list" />
 			<acme:menu-suboption code="master.menu.administrator.investorrecords.create" action="/administrator/investorrecords/create" />
 	<acme:menu-separator />
+
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown" />
       <acme:menu-separator />
 			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/list" />
