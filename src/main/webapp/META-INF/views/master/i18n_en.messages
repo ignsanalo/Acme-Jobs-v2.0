@@ -48,6 +48,8 @@ master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.shutdown = Shut down
 master.menu.administrator.announcement.list = List announcements
 master.menu.administrator.announcement.create = Create announcements
+master.menu.administrator.investorrecords.list = List investor records
+master.menu.administrator.investorrecords.create = Create investor records
 master.menu.administrator.configuration = Customization parameters
 
 # master.menu.provider ########################################################
