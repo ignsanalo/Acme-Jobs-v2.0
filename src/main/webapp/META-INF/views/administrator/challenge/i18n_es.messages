@@ -26,3 +26,7 @@ administrator.challenge.form.button.return = Volver
 
 administrator.challenge.list.label.title = Título
 administrator.challenge.list.label.deadline = Fecha límite
+
+administrator.requests.error.euroZone = Debe ser euros
+administrator.requests.error.bronzeReward = La recompensa de bronce debe ser menor que la de plata
+administrator.requests.error.silverReward = La recompensa de plata debe ser menor que la de oro
