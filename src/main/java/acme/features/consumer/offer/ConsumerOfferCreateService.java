@@ -41,7 +41,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "range", "ticker");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "range", "ticker", "accept");
 	}
 
 	@Override

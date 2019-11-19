@@ -58,6 +58,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
+
 		if (!errors.hasErrors()) {
 
 			Boolean eurZone = entity.getRewardBronze().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€") && entity.getRewardSilver().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€")
@@ -75,6 +76,7 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 			errors.state(request, orderReward, "rewardSilver", "administrator.requests.error.silverReward");
 
 		}
+
 
 	}
 

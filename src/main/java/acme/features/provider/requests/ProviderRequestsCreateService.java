@@ -41,7 +41,7 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker", "accept");
 	}
 
 	@Override
@@ -59,10 +59,19 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert errors != null;
 
-		boolean isAccepted;
+		if (!errors.hasErrors("deadline")) {
+			Boolean notPast = entity.getDeadline().after(new Date());
+			errors.state(request, notPast, "deadline", "provider.requests.error.deadline");
+		}
+		if (!errors.hasErrors("reward")) {
+			Boolean eurZone = entity.getReward().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			errors.state(request, eurZone, "reward", "provider.requests.error.euro_zone");
+		}
 
-		isAccepted = request.getModel().getBoolean("accept");
-		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
+		if (!errors.hasErrors("accept")) {
+			Boolean isAccepted = request.getModel().getBoolean("accept");
+			errors.state(request, isAccepted, "accept", "provider.requests.error.must-accept");
+		}
 
 	}
 

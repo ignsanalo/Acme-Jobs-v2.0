@@ -47,8 +47,8 @@ public class Companyrecord extends DomainEntity {
 	@NotNull
 	private String				email;
 
-	@Min(0)
-	@Max(5)
+	@Min(value = 0)
+	@Max(value = 5)
 	private Integer				stars;
 
 	private boolean				incorporated;
