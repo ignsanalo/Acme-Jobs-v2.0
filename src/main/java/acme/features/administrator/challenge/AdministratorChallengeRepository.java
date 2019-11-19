@@ -26,6 +26,10 @@ public interface AdministratorChallengeRepository extends AbstractRepository {
 	@Query("select c from Challenge c where c.id = ?1")
 	Challenge findOneChallengeById(int id);
 
+	//Calendar c = GregorianCalendar.getInstance();
+
+	//Date now = new Date();
+
 	@Query("select c from Challenge c where (c.deadline >= current_date())")
 	Collection<Challenge> findManyAll();
 

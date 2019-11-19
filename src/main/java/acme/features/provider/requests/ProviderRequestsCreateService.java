@@ -41,7 +41,7 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker", "accept");
 	}
 
 	@Override
