@@ -57,6 +57,25 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors()) {
+
+			Boolean eurZone = entity.getRewardBronze().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€") && entity.getRewardSilver().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€")
+				&& entity.getRewardGold().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			errors.state(request, eurZone, "rewardBronze", "administrator.requests.error.euroZone");
+			errors.state(request, eurZone, "rewardSilver", "administrator.requests.error.euroZone");
+			errors.state(request, eurZone, "rewardGold", "administrator.requests.error.euroZone");
+
+		}
+
+		if (!errors.hasErrors()) {
+			Boolean orderReward = entity.getRewardBronze().getAmount().compareTo(entity.getRewardSilver().getAmount()) < 0 && entity.getRewardSilver().getAmount().compareTo(entity.getRewardGold().getAmount()) < 0;
+
+			errors.state(request, orderReward, "rewardBronze", "administrator.requests.error.bronzeReward");
+			errors.state(request, orderReward, "rewardSilver", "administrator.requests.error.silverReward");
+
+		}
+
 	}
 
 	@Override
