@@ -45,7 +45,7 @@ public class AuthenticatedRequestsShowService implements AbstractShowService<Aut
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker");
+		request.unbind(entity, model, "title", "deadline", "text", "reward", "ticker");
 	}
 
 	@Override

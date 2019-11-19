@@ -17,9 +17,6 @@
 
 <acme:form>
 	<acme:form-textbox code="consumer.offer.form.label.title" path="title" />
-	<jstl:if test="${command !='create' }">
-		<acme:form-moment code="consumer.offer.form.label.moment" path="moment" readonly="true" />
-	</jstl:if>
 	<acme:form-moment code="consumer.offer.form.label.deadline" path="deadline" />
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text" />
 	<acme:form-textbox code="consumer.offer.form.label.range" path="range" />
