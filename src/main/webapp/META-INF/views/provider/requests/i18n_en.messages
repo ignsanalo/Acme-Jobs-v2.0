@@ -18,6 +18,11 @@ provider.requests.label.accept = Accept request
 provider.requests.form.button.create = Create request 
 provider.requests.form.button.return = Return
 
+provider.requests.error.deadline = The deadline can´t be past
+provider.requests.error.euro_zone = Must be Euro
+provider.requests.error.ticker_not_unique = The ticker must be unique
+provider.requests.error.must-accept = You must confirm the creation
+
 
 provider.requests.list.label.moment = Moment
 provider.requests.list.label.title = Title
