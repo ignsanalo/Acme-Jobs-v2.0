@@ -28,6 +28,10 @@ administrator.challenge.form.button.return = Return
 administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.deadline = Deadline
 
+administrator.requests.error.euroZone = Must be euros
+administrator.requests.error.bronzeReward = Bronze reward must be smaller than silver reward
+administrator.requests.error.silverReward = Silver reward must be smaller than gold reward
+
 
 
 

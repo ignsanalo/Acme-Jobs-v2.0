@@ -11,7 +11,7 @@
 administrator.configuration.form.label.spamWords = Palabras Spam:
 administrator.configuration.form.label.spamThreshold = Umbral Spam:
 
-administrator.configuration.form.button.return = Return
+administrator.configuration.form.button.return = Volver
 
 administrator.configuration.list.label.spamWords = Palabaras Spam
 administrator.configuration.list.label.spamThreshold = Umbral Spam
