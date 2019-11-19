@@ -7,7 +7,11 @@ consumer.offer.form.label.title = Title:
 consumer.offer.form.label.moment = Moment:
 consumer.offer.form.label.deadline = Deadline:
 consumer.offer.form.label.text = Text:
-consumer.offer.form.label.range = Range:
+consumer.offer.form.label.moneyMin = Minimum:
+consumer.offer.form.label.moneyMax = Maximum:
 consumer.offer.form.label.ticker = Ticker:
 consumer.offer.form.label.accept = Accept offert
 consumer.offer.form.button.create = Create offert
+
+consumer.requests.error.moneyMin = The minimum must be smaller than the maximum
+consumer.requests.error.tickerFormat = The format must be OXXXX-12345

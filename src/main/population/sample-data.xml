@@ -58,7 +58,8 @@
 		<property name="moment" value="2019/06/10 11:00" />
 		<property name="deadline" value="2021/07/10 11:00" />
 		<property name="text" value="This is a description of a sample offer"/>
-		<property name="range" value="50€"/>
+		<property name="moneyMin" value="50€"/>
+		<property name="moneyMax" value="100€"/>
 		<property name="ticker" value="OABCD-12345"/>
 	</bean>
 
@@ -67,7 +68,8 @@
 		<property name="moment" value="2019/07/15 18:00" />
 		<property name="deadline" value="2021/08/15 18:00" />
 		<property name="text" value="This is a description of another offer" />
-		<property name="range" value="30€" />
+		<property name="moneyMin" value="20€"/>
+		<property name="moneyMax" value="50€"/>
 		<property name="ticker" value="OEFGH-12345" />
 	</bean>
 
@@ -76,7 +78,8 @@
 		<property name="moment" value="2019/08/15 21:00" />
 		<property name="deadline" value="2021/09/15 21:00" />
 		<property name="text" value="This is a description of another offer"/>
-		<property name="range" value="60€"/>
+		<property name="moneyMin" value="30€"/>
+		<property name="moneyMax" value="80€"/>
 		<property name="ticker" value="OIJKL-12345"/>
 	</bean>
 

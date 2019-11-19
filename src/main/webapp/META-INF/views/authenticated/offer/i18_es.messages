@@ -19,5 +19,5 @@ authenticated.offer.form.label.title = Título:
 authenticated.offer.form.label.moment = Momento:
 authenticated.offer.form.label.deadline = Fecha límite:
 authenticated.offer.form.label.text = Texto:
-authenticated.offer.form.label.range = Rango:
+authenticated.offer.form.label.moneyMin = Mínimo:
 authenticated.offer.form.label.ticker = Ticker:

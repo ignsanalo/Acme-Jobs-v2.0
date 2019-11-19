@@ -41,7 +41,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "range", "ticker");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "moneyMin", "moneyMax", "ticker");
 	}
 
 	@Override
@@ -63,6 +63,16 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
+
+		if (!errors.hasErrors()) {
+			Boolean minmax = entity.getMoneyMin().getAmount().compareTo(entity.getMoneyMax().getAmount()) < 0;
+			errors.state(request, minmax, "moneyMin", "consumer.requests.error.moneyMin");
+		}
+
+		if (!errors.hasErrors()) {
+			Boolean tickerFormat = entity.getTicker().matches("^[O]{1}[A-Z]{4}\\-[0-9]{5}$");
+			errors.state(request, tickerFormat, "ticker", "consumer.requests.error.tickerFormat");
+		}
 
 	}
 

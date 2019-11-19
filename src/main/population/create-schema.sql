@@ -95,8 +95,10 @@
         `version` integer not null,
         `deadline` datetime(6),
         `moment` datetime(6),
-        `range_amount` double precision,
-        `range_currency` varchar(255),
+        `money_max_amount` double precision,
+        `money_max_currency` varchar(255),
+        `money_min_amount` double precision,
+        `money_min_currency` varchar(255),
         `text` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
@@ -142,6 +144,15 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `announcement` 
+       add constraint UK_mf534yi58uite8pvdnqmcvph4 unique (`moment`);
+
+    alter table `offer` 
+       add constraint UK_9oyh2fhqfi2pyleo6wmqvqdgq unique (`moment`);
+
+    alter table `requests` 
+       add constraint UK_daeute583h09tjukgqbl3rysl unique (`moment`);
 
     alter table `requests` 
        add constraint UK_5v1h0kdr8vcps4i9e55k5gnc8 unique (`ticker`);
