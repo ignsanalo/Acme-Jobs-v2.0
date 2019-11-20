@@ -318,7 +318,7 @@ has v</panel_attributes>
     <coordinates>
       <x>378</x>
       <y>497</y>
-      <w>308</w>
+      <w>336</w>
       <h>91</h>
     </coordinates>
     <panel_attributes>Requests
@@ -328,7 +328,7 @@ has v</panel_attributes>
 + deadline: Date {Temporal{TIMESTAMP}, NotNull}
 + text: String {NotBlank}
 + reward: Money {NotNull, Valid}
-+ ticker: String {NotBlank, Unique, Pattern{^[R]{1}[A-Z]{4}\\-[0-9]{5}$}
++ ticker: String {NotBlank, Unique, Pattern{^[R]{1}[A-Z]{4}\\-[0-9]{5}$, Valid}
 
 </panel_attributes>
     <additional_attributes/>
@@ -337,9 +337,9 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>56</x>
-      <y>511</y>
+      <y>504</y>
       <w>273</w>
-      <h>91</h>
+      <h>105</h>
     </coordinates>
     <panel_attributes>Offer
 --
@@ -347,8 +347,9 @@ has v</panel_attributes>
 + moment: Date {Temporal{TIMESTAMP}, PAST}
 + deadline: Date {Temporal{TIMESTAMP},NotNull}
 + text: String {NotBlank}
-+ range : Money {NotNull, Valid}
-+ ticker: String {NotBlank, Pattern{^[O]{1}[A-Z]{4}\\-[0-9]{5}$}
++ moneyMin : Money {NotNull, Valid}
++ moneyMax : Money {NotNull, Valid}
++ ticker: String {NotBlank, Pattern{^[O]{1}[A-Z]{4}\\-[0-9]{5}$, Valid}
 
 </panel_attributes>
     <additional_attributes/>
@@ -358,7 +359,7 @@ has v</panel_attributes>
     <coordinates>
       <x>336</x>
       <y>357</y>
-      <w>476</w>
+      <w>504</w>
       <h>126</h>
     </coordinates>
     <panel_attributes>CompanyRecord
@@ -368,7 +369,7 @@ has v</panel_attributes>
 + ceo: String {NotBlank}
 + description: String {NotBlank}
 + web : String {URL,NotBlank}
-+ phone: String {NotBlank, Pattern(regexp = "^([+][1-9]{0,3}[\\s]{0,1})?([(][1-9]{0,4}[)][\\s]{0,1})?[0-9]{6,10}$")}
++ phone: String {NotBlank, Pattern(regexp = "^([+][1-9]{0,3}[\\s]{0,1})?([(][1-9]{0,4}[)][\\s]{0,1})?[0-9]{6,10}$"), Valid}
 + email: String {Email, NotNull}
 + starts: Integer {Min(0), Max(5)}
 + incorporated: boolean 
@@ -388,7 +389,7 @@ has v</panel_attributes>
 + name: String {NotBlank}
 + sector:String {NotBlank}
 + statement: String {NotBlank}
-+ stars: Integer {Integer, Min{0}, Max{5}}
++ stars: Integer {Min{0}, Max{5}}
 
 </panel_attributes>
     <additional_attributes/>
