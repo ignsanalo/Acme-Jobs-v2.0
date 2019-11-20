@@ -17,7 +17,5 @@ authenticated.requests.form.label.ticker = Ticker:
 authenticated.requests.form.button.return = Return
 
 
-
-authenticated.requests.list.label.moment = Moment
 authenticated.requests.list.label.title = Title
 

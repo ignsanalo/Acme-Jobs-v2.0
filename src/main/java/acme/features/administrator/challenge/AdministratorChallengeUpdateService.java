@@ -61,6 +61,26 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("rewardBronze") && !errors.hasErrors("rewardSilver") && !errors.hasErrors("rewardGold")) {
+
+			Boolean eurZoneBronze = entity.getRewardBronze().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			Boolean eurZoneSilver = entity.getRewardSilver().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			Boolean eurZoneGold = entity.getRewardGold().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			errors.state(request, eurZoneBronze, "rewardBronze", "administrator.challenge.error.euroZone");
+			errors.state(request, eurZoneSilver, "rewardSilver", "administrator.challenge.error.euroZone");
+			errors.state(request, eurZoneGold, "rewardGold", "administrator.challenge.error.euroZone");
+
+		}
+
+		if (!errors.hasErrors("rewardBronze") && !errors.hasErrors("rewardSilver") && !errors.hasErrors("rewardGold")) {
+			Boolean orderReward = entity.getRewardBronze().getAmount().compareTo(entity.getRewardSilver().getAmount()) < 0 && entity.getRewardSilver().getAmount().compareTo(entity.getRewardGold().getAmount()) < 0;
+
+			errors.state(request, orderReward, "rewardBronze", "administrator.challenge.error.bronzeReward");
+			errors.state(request, orderReward, "rewardSilver", "administrator.challenge.error.silverReward");
+
+		}
+
 	}
 
 	@Override

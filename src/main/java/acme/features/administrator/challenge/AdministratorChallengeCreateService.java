@@ -58,25 +58,24 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert errors != null;
 
+		if (!errors.hasErrors("rewardBronze") && !errors.hasErrors("rewardSilver") && !errors.hasErrors("rewardGold")) {
 
-		if (!errors.hasErrors()) {
-
-			Boolean eurZone = entity.getRewardBronze().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€") && entity.getRewardSilver().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€")
-				&& entity.getRewardGold().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
-			errors.state(request, eurZone, "rewardBronze", "administrator.requests.error.euroZone");
-			errors.state(request, eurZone, "rewardSilver", "administrator.requests.error.euroZone");
-			errors.state(request, eurZone, "rewardGold", "administrator.requests.error.euroZone");
+			Boolean eurZoneBronze = entity.getRewardBronze().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			Boolean eurZoneSilver = entity.getRewardSilver().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			Boolean eurZoneGold = entity.getRewardGold().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			errors.state(request, eurZoneBronze, "rewardBronze", "administrator.challenge.error.euroZone");
+			errors.state(request, eurZoneSilver, "rewardSilver", "administrator.challenge.error.euroZone");
+			errors.state(request, eurZoneGold, "rewardGold", "administrator.challenge.error.euroZone");
 
 		}
 
-		if (!errors.hasErrors()) {
+		if (!errors.hasErrors("rewardBronze") && !errors.hasErrors("rewardSilver") && !errors.hasErrors("rewardGold")) {
 			Boolean orderReward = entity.getRewardBronze().getAmount().compareTo(entity.getRewardSilver().getAmount()) < 0 && entity.getRewardSilver().getAmount().compareTo(entity.getRewardGold().getAmount()) < 0;
 
-			errors.state(request, orderReward, "rewardBronze", "administrator.requests.error.bronzeReward");
-			errors.state(request, orderReward, "rewardSilver", "administrator.requests.error.silverReward");
+			errors.state(request, orderReward, "rewardBronze", "administrator.challenge.error.bronzeReward");
+			errors.state(request, orderReward, "rewardSilver", "administrator.challenge.error.silverReward");
 
 		}
-
 
 	}
 

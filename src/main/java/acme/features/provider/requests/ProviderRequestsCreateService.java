@@ -41,7 +41,7 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker", "accept");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "reward", "ticker");
 	}
 
 	@Override
@@ -71,6 +71,11 @@ public class ProviderRequestsCreateService implements AbstractCreateService<Prov
 		if (!errors.hasErrors("accept")) {
 			Boolean isAccepted = request.getModel().getBoolean("accept");
 			errors.state(request, isAccepted, "accept", "provider.requests.error.must-accept");
+		}
+
+		if (!errors.hasErrors("ticker")) {
+			Boolean tickerFormat = entity.getTicker().matches("^[R]{1}[A-Z]{4}\\-[0-9]{5}$");
+			errors.state(request, tickerFormat, "ticker", "provider.requests.error.tickerFormat");
 		}
 
 	}

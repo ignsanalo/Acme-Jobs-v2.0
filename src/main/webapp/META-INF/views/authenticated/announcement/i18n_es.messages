@@ -15,5 +15,4 @@ authenticated.announcement.form.label.text = Texto:
 authenticated.announcement.form.button.return = Volver
 
 
-authenticated.announcement.list.label.moment = Momento
 authenticated.announcement.list.label.title = Título

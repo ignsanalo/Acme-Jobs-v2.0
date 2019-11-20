@@ -18,10 +18,6 @@
 
 <tiles-definitions>
 	
-	<definition name="consumer/offer/list" extends="master">
-		<put-attribute name="body" type="template" value="../consumer/offer/list.jsp" />
-	</definition>
-	
 	<definition name="consumer/offer/form" extends="master">
 		<put-attribute name="body" type="template" value="../consumer/offer/form.jsp" />
 	</definition>

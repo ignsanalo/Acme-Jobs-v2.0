@@ -19,5 +19,10 @@ provider.requests.form.button.create = Crear solicitud
 provider.requests.form.button.return = Volver
 
 
-provider.requests.list.label.moment = Momento
+provider.requests.error.deadline = La fecha límite debe ser anterior a la fecha actual.
+provider.requests.error.euro_zone = Debe tener el formato euros|eur|Euros|EUR|EUROS|€.
+provider.requests.error.must-accept = Debe aceptar la creación.
+provider.requests.error.tickerFormat = Debe tener el formato [O]{1}[A-Z]{4}\\-[0-9]{5}.
+
+
 provider.requests.list.label.title = Título
