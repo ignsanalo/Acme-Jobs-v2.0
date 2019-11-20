@@ -19,6 +19,11 @@ administrator.challenge.form.label.rewardSilver = Silver Reward:
 administrator.challenge.form.label.goalBronze = Bronze Goal:
 administrator.challenge.form.label.rewardBronze = Bronze Reward:
 
+
+administrator.challenge.error.euroZone = Must be match euros|eur|Euros|EUR|EUROS|€.
+administrator.challenge.error.bronzeReward = Bronze reward must be lower than Silver reward.
+administrator.challenge.error.silverReward = Silver reward must be lower than Gold reward.
+
 administrator.challenge.form.button.update = Update
 administrator.challenge.form.button.delete = Delete
 administrator.challenge.form.button.create = Create
@@ -27,10 +32,6 @@ administrator.challenge.form.button.return = Return
 
 administrator.challenge.list.label.title = Title
 administrator.challenge.list.label.deadline = Deadline
-
-administrator.requests.error.euroZone = Must be euros
-administrator.requests.error.bronzeReward = Bronze reward must be smaller than silver reward
-administrator.requests.error.silverReward = Silver reward must be smaller than gold reward
 
 
 

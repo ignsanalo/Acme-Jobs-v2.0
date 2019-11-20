@@ -32,7 +32,6 @@ public class Requests extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	@NotNull
 	private Date				moment;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -49,6 +48,7 @@ public class Requests extends DomainEntity {
 	@Column(unique = true)
 	@Pattern(regexp = "^[R]{1}[A-Z]{4}\\-[0-9]{5}$")
 	@NotBlank
+	@Valid
 	private String				ticker;
 
 	// Derived attributes -----------------------------------------------------------------

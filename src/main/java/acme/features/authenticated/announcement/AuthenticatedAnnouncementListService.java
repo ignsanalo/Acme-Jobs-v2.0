@@ -47,7 +47,7 @@ public class AuthenticatedAnnouncementListService implements AbstractListService
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "moment", "title");
+		request.unbind(entity, model, "title");
 	}
 
 	@Override

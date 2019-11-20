@@ -7,7 +7,7 @@
 	<acme:form-textbox code="authenticated.companyrecord.form.label.name" path="name"/>
 	<acme:form-textbox code="authenticated.companyrecord.form.label.sector" path="sector"/>
 	<acme:form-textbox code="authenticated.companyrecord.form.label.ceo" path="ceo"/>
-	<acme:form-textbox code="authenticated.companyrecord.form.label.description" path="description"/>
+	<acme:form-textarea code="authenticated.companyrecord.form.label.description" path="description"/>
 	<acme:form-url code="authenticated.companyrecord.form.label.web" path="web"/>
 	<acme:form-textbox code="authenticated.companyrecord.form.label.phone" path="phone"/>
 	<acme:form-textbox code="authenticated.companyrecord.form.label.email" path="email"/>

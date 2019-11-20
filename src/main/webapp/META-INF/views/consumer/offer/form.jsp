@@ -22,7 +22,8 @@
 	</jstl:if>
 	<acme:form-moment code="consumer.offer.form.label.deadline" path="deadline" />
 	<acme:form-textarea code="consumer.offer.form.label.text" path="text" />
-	<acme:form-textbox code="consumer.offer.form.label.range" path="range" />
+	<acme:form-money code="consumer.offer.form.label.moneyMin" path="moneyMin" />
+	<acme:form-money code="consumer.offer.form.label.moneyMax" path="moneyMax" />
 	<acme:form-textbox code="consumer.offer.form.label.ticker" path="ticker" />
 	<jstl:if test="${command =='create' }">
 	        <acme:form-checkbox  code="consumer.offer.form.label.accept" path="accept" />

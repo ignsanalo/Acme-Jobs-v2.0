@@ -41,7 +41,8 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "moment", "deadline", "text", "range", "ticker", "accept");
+		request.unbind(entity, model, "title", "moment", "deadline", "text", "moneyMin", "moneyMax", "ticker");
+
 	}
 
 	@Override
@@ -59,10 +60,28 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert entity != null;
 		assert errors != null;
 
-		boolean isAccepted;
+		if (!errors.hasErrors("moneyMin") && !errors.hasErrors("moneyMax")) {
+			Boolean eurZoneMin = entity.getMoneyMin().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
+			Boolean eurZoneMax = entity.getMoneyMax().getCurrency().matches("euros|eur|Euros|EUR|EUROS|€");
 
-		isAccepted = request.getModel().getBoolean("accept");
-		errors.state(request, isAccepted, "accept", "anonymous.user-account.error.must-accept");
+			errors.state(request, eurZoneMin, "moneyMin", "consumer.offer.error.euroZone");
+			errors.state(request, eurZoneMax, "moneyMax", "consumer.offer.error.euroZone");
+
+		}
+		if (!errors.hasErrors("accept")) {
+			Boolean isAccepted = request.getModel().getBoolean("accept");
+			errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
+		}
+
+		if (!errors.hasErrors("moneyMin") && !errors.hasErrors("moneyMax")) {
+			Boolean minmax = entity.getMoneyMin().getAmount().compareTo(entity.getMoneyMax().getAmount()) < 0;
+			errors.state(request, minmax, "moneyMin", "consumer.offer.error.moneyMin");
+		}
+
+		if (!errors.hasErrors("ticker")) {
+			Boolean tickerFormat = entity.getTicker().matches("^[O]{1}[A-Z]{4}\\-[0-9]{5}$");
+			errors.state(request, tickerFormat, "ticker", "consumer.offer.error.tickerFormat");
+		}
 
 	}
 

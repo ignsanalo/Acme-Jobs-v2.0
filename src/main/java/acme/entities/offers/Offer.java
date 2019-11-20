@@ -31,7 +31,6 @@ public class Offer extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	@NotNull
 	private Date				moment;
 
 	@Temporal(TemporalType.TIMESTAMP)
@@ -43,10 +42,15 @@ public class Offer extends DomainEntity {
 
 	@NotNull
 	@Valid
-	private Money				range;
+	private Money				moneyMin;
+
+	@NotNull
+	@Valid
+	private Money				moneyMax;
 
 	@Pattern(regexp = "^[O]{1}[A-Z]{4}\\-[0-9]{5}$")
 	@NotBlank
+	@Valid
 	private String				ticker;
 
 	// Derived attributes -----------------------------------------------------------------

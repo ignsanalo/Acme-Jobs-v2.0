@@ -17,5 +17,4 @@ authenticated.requests.form.label.ticker = Identificador:
 authenticated.requests.form.button.return = Volver
 
 
-authenticated.requests.list.label.moment = Momento
 authenticated.requests.list.label.title = Título
