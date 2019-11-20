@@ -19,7 +19,7 @@
 	<acme:form-textbox code="administrator.companyrecord.form.label.name" path="name"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.sector" path="sector"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.ceo" path="ceo"/>
-	<acme:form-textbox code="administrator.companyrecord.form.label.description" path="description"/>
+	<acme:form-textarea code="administrator.companyrecord.form.label.description" path="description"/>
 	<acme:form-url code="administrator.companyrecord.form.label.web" path="web"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.phone" path="phone"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.email" path="email"/>
