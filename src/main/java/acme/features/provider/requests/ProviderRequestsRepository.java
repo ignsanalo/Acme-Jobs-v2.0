@@ -13,6 +13,7 @@
 package acme.features.provider.requests;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -29,7 +30,7 @@ public interface ProviderRequestsRepository extends AbstractRepository {
 	@Query("select r from Requests r where r.id = ?1")
 	Requests findOneByTicker(String ticker);
 
-	@Query("select r from Requests r where (r.deadline >= current_date())")
-	Collection<Requests> findManyAll();
+	@Query("select r from Requests r where (r.deadline >= ?1)")
+	Collection<Requests> findManyAll(Date c);
 
 }

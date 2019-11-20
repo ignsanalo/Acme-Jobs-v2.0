@@ -1,7 +1,9 @@
 
 package acme.features.consumer.offer;
 
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,8 +45,9 @@ public class ConsumerOfferListService implements AbstractListService<Consumer, O
 		assert request != null;
 
 		Collection<Offer> result;
+		Date c = Calendar.getInstance().getTime();
 
-		result = this.repository.findManyAll();
+		result = this.repository.findManyAll(c);
 
 		return result;
 

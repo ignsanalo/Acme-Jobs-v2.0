@@ -136,7 +136,7 @@
 	
 	<bean id="challenge01" class="acme.entities.challenges.Challenge">
 		<property name="title" value="Sample challenge 01" />
-		<property name="deadline" value="2020/11/10 00:00" />
+		<property name="deadline" value="2010/11/10 00:00" />
 		<property name="description" value="This is a description of a sample challenge"/>
 		<property name="goalGold" value="This is the goal gold"/>
 		<property name="rewardGold" value="€1000.0"/>
