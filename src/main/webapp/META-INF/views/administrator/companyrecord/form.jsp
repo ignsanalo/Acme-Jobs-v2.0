@@ -23,7 +23,7 @@
 	<acme:form-url code="administrator.companyrecord.form.label.web" path="web"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.phone" path="phone"/>
 	<acme:form-textbox code="administrator.companyrecord.form.label.email" path="email"/>
-	<acme:form-integer code="administrator.companyrecord.form.label.stars" path="stars"/>
+	<acme:form-integer code="administrator.companyrecord.form.label.stars" path="stars" placeholder="0-5"/>
 	
 	<acme:form-submit test="${command == 'show'}"
 		code="administrator.companyrecord.form.button.update"
